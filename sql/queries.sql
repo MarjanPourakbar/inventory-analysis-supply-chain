@@ -1,1 +1,1 @@
-
+-- SQL queries for inventory analysis project
