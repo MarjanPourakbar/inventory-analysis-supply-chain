@@ -1,8 +1,15 @@
--- SQL queries for inventory analysis project
-SELECT * FROM inventory LIMIT 10;
--- Show all inventory records (all columns)
-SELECT *
-FROM inventory;
-SELECT product_id, quantity
+-- Show some key columns from the inventory table
+SELECT
+    invoice_date,
+    vehicle_model,
+    invoice_line_text
 FROM inventory
-WHERE quantity = 0;
+LIMIT 10;
+-- Show jobs for a specific vehicle model
+SELECT
+    invoice_date,
+    vehicle_model,
+    invoice_line_text
+FROM inventory
+WHERE vehicle_model = 'BAJAJ PULSAR NS 200'
+LIMIT 10;
